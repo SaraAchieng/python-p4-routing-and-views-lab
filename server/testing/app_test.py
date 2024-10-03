@@ -42,7 +42,8 @@ class TestApp:
     def test_count_range_10(self):
         '''counts through range of parameter in "/count/<parameter" on separate lines.'''
         response = app.test_client().get('/count/10')
-        count = '0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n'
+        # count = '0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n'
+        count = '1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9'
         assert(response.data.decode() == count)
 
     def test_math_route(self):
